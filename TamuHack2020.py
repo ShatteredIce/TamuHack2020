@@ -26,18 +26,19 @@ def compareTimes(durations):
     return converted_times.index(min(converted_times))
 
 #returns the formatted url to be queried
-def format_url(origin, destinations):
+def format_url(origin, destinations, key):
     dst_string = ""
     for dst in destinations:
         if dst != destinations[0]:
             dst_string += "|"
         dst_string += dst
     url = "https://maps.googleapis.com/maps/api/distancematrix/json?origins=" \
-          + origin + "&destinations=" + dst_string + "&key=AIzaSyAYT6ulXlSRx5RVOVFN0GMcirSCkCKlRfo"
+          + origin + "&destinations=" + dst_string + "&key=" + key
     print(url)
     return url
 
 
+key = input("Enter API Key: ")
 start_addr = input("Enter starting address: ")
 dest_addr = []
 input_line = "placeholder"
@@ -48,7 +49,7 @@ while input_line != "":
    input_line = input("Enter destination address (hit enter to exit): ")
 
 
-url = format_url(start_addr, dest_addr)
+url = format_url(start_addr, dest_addr, key)
 
 #url = "https://maps.googleapis.com/maps/api/distancematrix/json?origins=14332 NW Falconridge Ln&destinations=Texas A&M University|Cornell University&key=AIzaSyAYT6ulXlSRx5RVOVFN0GMcirSCkCKlRfo"
 
