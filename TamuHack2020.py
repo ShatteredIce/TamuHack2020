@@ -96,9 +96,16 @@ def getvalue():
     print("Durations", durations)
     min_t_index = compareTimes(durations)
 
-    result_str = "Results for " + condition + " around " + start_addr + ":\n \
+    result_str = "Results for " + condition + " around " + start_addr + ":\n\n \
     Closest destination is " + hospitals[min_t_index][2] + " at " + data['destination_addresses'][min_t_index] + " \nwhich is " + distances[min_t_index] + \
-                 " and " + durations[min_t_index] + " away. (Average Total Payments: $" + str(hospitals[min_t_index][10]) + ")"
+                 " and " + durations[min_t_index] + " away. (Average Total Payments: $" + str(hospitals[min_t_index][10]) + ")\n"
+
+    result_str += "\n ===== Other options ====="
+
+    for h in range(0, len(hospitals)):
+        if h != min_t_index:
+            result_str += "\n" + hospitals[h][2] + " at " + data['destination_addresses'][h] + " - " + distances[h] + \
+                 " - " + durations[h] + " (Average Total Payments: $" + str(hospitals[h][10]) + ")"
 
     # print("\nClosest destination is", data['destination_addresses'][min_t_index], "which is", distances[min_t_index], "and", durations[min_t_index], "away.")
 
