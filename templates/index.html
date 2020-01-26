@@ -31,8 +31,10 @@
 </style>
 
 <body>
+
   <header align="center">
-    <h1><b>TAMUHACK 2020!</b></h1>
+
+    <h1><b>MedCenter Database</b></h1>
 
     <form name="search" action="." method="post">
         <label>Street Address:</label>
@@ -44,16 +46,109 @@
         <label>State Code:</label>
         <input type="text" name="usr_state">
         <label>Medical Condition:</label>
-        <input type="text" name="usr_con">
+        <input list="condition" name = "usr_con">
+        <datalist id="condition">
+            <option value="ACUTE MYOCARDIAL INFARCTION">
+            <option value="ALCOHOL/DRUG ABUSE OR DEPENDENCE W/O REHABILITATION THERAPY W/O MCC">
+            <option value="ATHEROSCLEROSIS W/O MCC">
+            <option value="BACK & NECK PROC EXC SPINAL FUSION W/O CC/MCC">
+            <option value="BRONCHITIS & ASTHMA W CC/MCC">
+            <option value="BRONCHITIS & ASTHMA W/O CC/MCC">
+            <option value="CARDIAC ARRHYTHMIA & CONDUCTION DISORDERS W CC">
+            <option value="CARDIAC ARRHYTHMIA & CONDUCTION DISORDERS W MCC">
+            <option value="CARDIAC ARRHYTHMIA & CONDUCTION DISORDERS W/O CC/MCC">
+            <option value="CELLULITIS W MCC">
+            <option value="CELLULITIS W/O MCC">
+            <option value="CERVICAL SPINAL FUSION W/O CC/MCC">
+            <option value="CHEST PAIN">
+            <option value="CHRONIC OBSTRUCTIVE PULMONARY DISEASE W CC">
+            <option value="CHRONIC OBSTRUCTIVE PULMONARY DISEASE W MCC">
+            <option value="CHRONIC OBSTRUCTIVE PULMONARY DISEASE W/O CC/MCC">
+            <option value="CIRCULATORY DISORDERS EXCEPT AMI">
+            <option value="CRANIAL & PERIPHERAL NERVE DISORDERS W/O MCC">
+            <option value="DEGENERATIVE NERVOUS SYSTEM DISORDERS W/O MCC">
+            <option value="DIABETES W CC">
+            <option value="DISORDERS OF PANCREAS EXCEPT MALIGNANCY W CC">
+            <option value="DYSEQUILIBRIUM">
+            <option value="ESOPHAGITIS">
+            <option value="EXTRACRANIAL PROCEDURES W/O CC/MCC">
+            <option value="FRACTURES OF HIP & PELVIS W/O MCC">
+            <option value="FX">
+            <option value="G.I. HEMORRHAGE W CC">
+            <option value="G.I. HEMORRHAGE W MCC">
+            <option value="G.I. HEMORRHAGE W/O CC/MCC">
+            <option value="G.I. OBSTRUCTION W CC">
+            <option value="G.I. OBSTRUCTION W/O CC/MCC">
+            <option value="HEART FAILURE & SHOCK W CC">
+            <option value="HEART FAILURE & SHOCK W MCC">
+            <option value="HEART FAILURE & SHOCK W/O CC/MCC">
+            <option value="HIP & FEMUR PROCEDURES EXCEPT MAJOR JOINT W CC">
+            <option value="HIP & FEMUR PROCEDURES EXCEPT MAJOR JOINT W MCC">
+            <option value="HIP & FEMUR PROCEDURES EXCEPT MAJOR JOINT W/O CC/MCC">
+            <option value="HYPERTENSION W/O MCC">
+            <option value="INFECTIOUS & PARASITIC DISEASES W O.R. PROCEDURE W MCC">
+            <option value="INTRACRANIAL HEMORRHAGE OR CEREBRAL INFARCTION W CC">
+            <option value="INTRACRANIAL HEMORRHAGE OR CEREBRAL INFARCTION W MCC">
+            <option value="INTRACRANIAL HEMORRHAGE OR CEREBRAL INFARCTION W/O CC/MCC">
+            <option value="KIDNEY & URINARY TRACT INFECTIONS W MCC">
+            <option value="KIDNEY & URINARY TRACT INFECTIONS W/O MCC">
+            <option value="LAPAROSCOPIC CHOLECYSTECTOMY W/O C.D.E. W CC">
+            <option value="LAPAROSCOPIC CHOLECYSTECTOMY W/O C.D.E. W/O CC/MCC">
+            <option value="MAJOR CARDIOVASC PROCEDURES W/O MCC">
+            <option value="MAJOR GASTROINTESTINAL DISORDERS & PERITONEAL INFECTIONS W CC">
+            <option value="MAJOR JOINT REPLACEMENT OR REATTACHMENT OF LOWER EXTREMITY W MCC">
+            <option value="MAJOR JOINT REPLACEMENT OR REATTACHMENT OF LOWER EXTREMITY W/O MCC">
+            <option value="MAJOR SMALL & LARGE BOWEL PROCEDURES W CC">
+            <option value="MAJOR SMALL & LARGE BOWEL PROCEDURES W MCC">
+            <option value="MEDICAL BACK PROBLEMS W/O MCC">
+            <option value="MISC DISORDERS OF NUTRITION">
+            <option value="OTHER CIRCULATORY SYSTEM DIAGNOSES W CC">
+            <option value="OTHER CIRCULATORY SYSTEM DIAGNOSES W MCC">
+            <option value="OTHER DIGESTIVE SYSTEM DIAGNOSES W CC">
+            <option value="OTHER KIDNEY & URINARY TRACT DIAGNOSES W CC">
+            <option value="OTHER KIDNEY & URINARY TRACT DIAGNOSES W MCC">
+            <option value="OTHER VASCULAR PROCEDURES W CC">
+            <option value="OTHER VASCULAR PROCEDURES W MCC">
+            <option value="OTHER VASCULAR PROCEDURES W/O CC/MCC">
+            <option value="PERC CARDIOVASC PROC W DRUG-ELUTING STENT W MCC OR 4+ VESSELS/STENTS">
+            <option value="PERC CARDIOVASC PROC W DRUG-ELUTING STENT W/O MCC">
+            <option value="PERC CARDIOVASC PROC W NON-DRUG-ELUTING STENT W/O MCC">
+            <option value="PERC CARDIOVASC PROC W/O CORONARY ARTERY STENT W/O MCC">
+            <option value="PERIPHERAL VASCULAR DISORDERS W CC">
+            <option value="PERIPHERAL VASCULAR DISORDERS W/O CC/MCC">
+            <option value="PERMANENT CARDIAC PACEMAKER IMPLANT W CC">
+            <option value="PERMANENT CARDIAC PACEMAKER IMPLANT W/O CC/MCC">
+            <option value="POISONING & TOXIC EFFECTS OF DRUGS W MCC">
+            <option value="POISONING & TOXIC EFFECTS OF DRUGS W/O MCC">
+            <option value="PSYCHOSES">
+            <option value="PULMONARY EDEMA & RESPIRATORY FAILURE">
+            <option value="PULMONARY EMBOLISM W/O MCC">
+            <option value="RED BLOOD CELL DISORDERS W MCC">
+            <option value="RED BLOOD CELL DISORDERS W/O MCC">
+            <option value="RENAL FAILURE W CC">
+            <option value="RENAL FAILURE W MCC">
+            <option value="RENAL FAILURE W/O CC/MCC">
+            <option value="RESPIRATORY INFECTIONS & INFLAMMATIONS W CC">
+            <option value="RESPIRATORY INFECTIONS & INFLAMMATIONS W MCC">
+            <option value="RESPIRATORY SYSTEM DIAGNOSIS W VENTILATOR SUPPORT 96+ HOURS">
+            <option value="RESPIRATORY SYSTEM DIAGNOSIS W VENTILATOR SUPPORT <96 HOURS">
+            <option value="SEIZURES W/O MCC">
+            <option value="SEPTICEMIA OR SEVERE SEPSIS W MV 96+ HOURS">
+            <option value="SEPTICEMIA OR SEVERE SEPSIS W/O MV 96+ HOURS W MCC">
+            <option value="SEPTICEMIA OR SEVERE SEPSIS W/O MV 96+ HOURS W/O MCC">
+            <option value="SIGNS & SYMPTOMS W/O MCC">
+            <option value="SIMPLE PNEUMONIA & PLEURISY W CC">
+            <option value="SIMPLE PNEUMONIA & PLEURISY W MCC">
+            <option value="SIMPLE PNEUMONIA & PLEURISY W/O CC/MCC">
+            <option value="SPINAL FUSION EXCEPT CERVICAL W/O MCC">
+            <option value="SYNCOPE & COLLAPSE">
+            <option value="TRANSIENT ISCHEMIA">
+        </datalist>
         <input type="submit" name="submit">
     </form>
-
       <p>
-      <h3>{{results}} </h3>
+      <h3>{{results}}</h3>
       </p>
-
-
   </header>
-
 </body>
 </html>

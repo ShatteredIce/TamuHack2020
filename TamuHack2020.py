@@ -1,5 +1,4 @@
 import requests
-import json
 from flask import Flask, render_template, request
 import HospitalSearcher as hs
 
@@ -98,14 +97,14 @@ def getvalue():
 
     result_str = "Results for " + condition + " around " + start_addr + ":\n\n \
     Closest destination is " + hospitals[min_t_index][2] + " at " + data['destination_addresses'][min_t_index] + " \nwhich is " + distances[min_t_index] + \
-                 " and " + durations[min_t_index] + " away. (Average Total Payments: $" + str(hospitals[min_t_index][10]) + ")\n"
+                 " and " + durations[min_t_index] + " away. (" + hospitals[min_t_index][0].lower() + ") (Average Total Payments: $" + str(hospitals[min_t_index][10]) + ")\n"
 
     result_str += "\n ===== Other options ====="
 
     for h in range(0, len(hospitals)):
         if h != min_t_index:
-            result_str += "\n" + hospitals[h][2] + " at " + data['destination_addresses'][h] + " - " + distances[h] + \
-                 " - " + durations[h] + " (Average Total Payments: $" + str(hospitals[h][10]) + ")"
+            result_str += "\n" + hospitals[h][2] + " at " + data['destination_addresses'][h] + "\n" + distances[h] + \
+                 " - " + durations[h] + " (" + hospitals[h][0].lower() + ") (Average Total Payments: $" + str(hospitals[h][10]) + ")\n"
 
     # print("\nClosest destination is", data['destination_addresses'][min_t_index], "which is", distances[min_t_index], "and", durations[min_t_index], "away.")
 

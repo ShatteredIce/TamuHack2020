@@ -75,9 +75,12 @@ def getPossibleLocs(procedure, state, city, comm):
             except:
                 break
             for j in range(len(hosps)):
-                if hosps[j][10] < leastPrice:
-                    leastPrice = hosps[j][10]
-                    leastCostlyHosp = hosps[j]
+                try:
+                    if hosps[j][10] < leastPrice:
+                        leastPrice = hosps[j][10]
+                        leastCostlyHosp = hosps[j]
+                except:
+                    continue
             topChoices.append(leastCostlyHosp)
             hosps.remove(leastCostlyHosp)
         return topChoices
