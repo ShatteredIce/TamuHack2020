@@ -60,12 +60,12 @@ def getvalue():
 
     # collect addresses of hospitals
     hospitals = hs.getPossibleLocs(condition, state, city, suburb)
-    if len(hospitals) == 0:
+    if hospitals == "None found!":
         return render_template('index.html', results="No results found.")
 
     for line in hospitals:
         dest_addr.append(" ".join(line[3:6]))
-    print(dest_addr)
+    #print(dest_addr)
 
     # read api key from local file
     kfile = open("key.txt","r")
