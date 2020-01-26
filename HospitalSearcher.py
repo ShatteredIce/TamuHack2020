@@ -8,12 +8,15 @@ def stateNameToStateCode(st):
         with open('states.csv') as statesfile:
             for line in statesfile:
                 stateslist.append(line.split(','))
+        print([stateslist[i][1] for i in range(len(stateslist))])
         for i in range(len(stateslist)):
-            if stateslist[i][1] == st:
+            if stateslist[i][1][:len(stateslist[i][1])-1] == st:
                 return stateslist[i][0]
+    return 'TX'
 
 def getInitPossibleLocs(procedure, state, city, comm):
     state = stateNameToStateCode(state)
+    print(state)
     inpdatalist = []
     with open('inpatientCharges.csv') as inpdatafile:
         for line in inpdatafile:
