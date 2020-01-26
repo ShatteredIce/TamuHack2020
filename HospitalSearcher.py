@@ -86,3 +86,20 @@ def getPossibleLocs(procedure, state, city, comm):
         return topChoices
     else:
         return 'None found!'
+    
+def getUniqueConditions():
+    inpdatalist = []
+    with open('inpatientCharges.csv') as inpdatafile:
+        for line in inpdatafile:
+            inpdatalist.append(line.split(','))
+    
+    #get unique diseases
+    unique_pros = [inpdatalist[1][0]]
+    for i in range(2,len(inpdatalist)):
+        if inpdatalist[i][0] != inpdatalist[i-1][0]:
+            unique_pros.append(inpdatalist[i][0])
+            
+    finalRet = []
+    for i in range(len(unique_pros)):
+        finalRet.append(unique_pros[i][0])
+    return finalRet
