@@ -97,10 +97,10 @@ def getvalue():
     min_t_index = compareTimes(durations)
 
     result_str = "Results for " + condition + " around " + start_addr + ":\n \
-    Closest destination is " + data['destination_addresses'][min_t_index] + " which is " + distances[min_t_index] + \
-                 " and " + durations[min_t_index] + " away."
+    Closest destination is " + hospitals[min_t_index][2] + " at " + data['destination_addresses'][min_t_index] + " \nwhich is " + distances[min_t_index] + \
+                 " and " + durations[min_t_index] + " away. (Average Total Payments: $" + str(hospitals[min_t_index][10]) + ")"
 
-    print("\nClosest destination is", data['destination_addresses'][min_t_index], "which is", distances[min_t_index], "and", durations[min_t_index], "away.")
+    # print("\nClosest destination is", data['destination_addresses'][min_t_index], "which is", distances[min_t_index], "and", durations[min_t_index], "away.")
 
     return render_template('index.html', results=result_str)
 
