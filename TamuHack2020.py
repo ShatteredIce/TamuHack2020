@@ -88,7 +88,7 @@ def getvalue():
             distances.append(travel_data[i]['distance']['text'])
             durations.append(travel_data[i]['duration']['text'])
         except KeyError:
-            return render_template('index.html', results=data['destination_addresses'][i] + ".")
+            return render_template('index.html', results="No path from starting location to " + data['destination_addresses'][i] + ".")
 
 
     print("Distances", distances)
